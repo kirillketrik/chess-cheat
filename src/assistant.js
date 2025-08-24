@@ -72,8 +72,8 @@ function initializeChessAssistant(fenTurnMarker) {
     let currentFEN = `${generateFENString()} ${fenTurnMarker}`;
     console.log("Chess Assistant: Initial FEN:", currentFEN);
 
-    const stockfishWorkerPath = chrome.runtime.getURL("src/stockfish.js");
-
+    const stockfishWorkerPath = "/bundles/app/js/vendor/jschessengine/stockfish.asm.1abfa10c.js";
+    
     try {
         stockfishEngine = new Worker(stockfishWorkerPath);
     } catch (e) {
